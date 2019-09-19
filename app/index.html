@@ -1,14 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-	<link rel="stylesheet" href="css/main.css">
-	<title>Lemon</title>
+		<link rel="stylesheet" href="css/main.css">
+		<title>Lemon</title>
 </head>
 <body>
-	
+		<header class="header container">
+				<a class="header__logo" href="#" target="_self" title="На главную страницу">
+						<img src="" alt="Логотип" width="" height="">
+				</a>
+				<input class="header__search" type="search" placeholder="find a recipe">
+				<span class="header__burger-menu"></span>
+		</header>
+		<main class="main container">
+				<section class="main__get-it-recipe">
+						<img class="main__get-it-recipe-img" src="" alt="Cooked dish image" width="" height="">
+						<p class="main__get-it-recipe-title"></p>
+				</section>
+				<section class="main__recipe-gallery">
+						<article class="main__recipe-gallery-item">
+								<img class="main__recipe-gallery-img" src="" alt="Raspbery & Cream Frozen Yogurt Pie" width="" height="">
+								<h1 class="main__recipe-gallery-title">Raspbery & Cream Frozen Yogurt Pie</h1>
+								<div class="main__recipe-gallery-item-information information">
+										<p class="information__cooking-time">35mins |</p>
+										<p class="information__comments">7</p>
+										<p class="information__views">14</p>
+								</div>
+						</article>
+						<article class="main__recipe-gallery-item">
+								<img class="main__recipe-gallery-img" src="" alt="Giant Ice Cream Sandwich" width="" height="">
+								<h1 class="main__recipe-gallery-title">Giant Ice Cream Sandwich</h1>
+								<div class="main__recipe-gallery-item-information information">
+										<p class="information__cooking-time">20mins |</p>
+										<p class="information__comments">4</p>
+										<p class="information__views">356</p>
+								</div>
+						</article>
+						<article class="main__recipe-gallery-item">
+								<img class="main__recipe-gallery-img" src="" alt="Dark Chocolate Crunch Ice Cream Sandwich Cake" width="" height="">
+								<h1 class="main__recipe-gallery-title">Dark Chocolate Crunch Ice Cream Sandwich Cake</h1>
+								<div class="main__recipe-gallery-item-information information">
+										<p class="information__cooking-time">15mins |</p>
+										<p class="information__comments">4</p>
+										<p class="information__views">167</p>
+								</div>
+						</article>
+				</section>
+				<section class="main__recipes-list">
+						<div class="main__recipes-list-toggle">
+								<input type="checkbox" name="difficulty" value="easy" id="easy">
+								<input type="checkbox" name="difficulty" value="middle" id="middle">
+								<input type="checkbox" name="difficulty" value="long" id="long">
+								<label for="easy">easy</label>
+								<label for="middle">middle</label>
+								<label for="long">long</label>
+						</div>
+						<div class="main__recipes-list-easy-items">
+								<div class="main__recipes-list-item">
+										<p class="main__recipes-list-item-author"></p>
+										<p class="main__recipes-list-item-description"></p>
+								</div>
+								<div class="main__recipes-list-item">
+										<p class="main__recipes-list-item-author"></p>
+										<p class="main__recipes-list-item-description"></p>
+								</div>
+								<div class="main__recipes-list-item">
+										<p class="main__recipes-list-item-author"></p>
+										<p class="main__recipes-list-item-description"></p>
+								</div>
+						</div>
+						<div class="main__recipes-list-user-actions">
+								<a class="main__recipes-list-user-actions-link" href="#" target="_self" title="Print">print</a>
+								<a class="main__recipes-list-user-actions-link" href="#" target="_self" title="Send a message">message</a>
+								<a class="main__recipes-list-user-actions-link" href="#" target="_self" title="Facebook">facebook</a>
+								<a class="main__recipes-list-user-actions-link" href="#" target="_self" title="Pinterest">pinterest</a>
+						</div>
+						<button class="main__recipes-list-view-more-btn button">view more</button>
+				</section>
+				<section class="main__popular-now">
+						<span class="main__popular-now-title">popular now</span>
+						<article class="main__popular-now-item">
+								<h1 class="main__popular-now-item-title">vanilla frozen coffee</h1>
+								<p class="main__popular-now-item-description"> mix coffee, sugar and creamer.<br>pour into blender and add ice cubes.<br>blend until smooth.</p>
+								<div class="main__popular-now-item-user-block">
+										<button class="main__popular-now-item-btn button">get it recipe</button>
+										<div class="main__popular-now-item-information information">
+												<p class="information__cooking-time">15mins |</p>
+												<p class="information__comments">4</p>
+												<p class="information__views">167</p>
+										</div>
+								</div>
+						</article>
+				</section>
+		</main>
+		<footer class="footer container">
+				<div class="footer__user-block">
+						<a class="footer__logo" href="#" target="_self" title="На главную страницу">
+								<img src="" alt="Логотип" width="" height="">
+						</a>
+						<ul class="footer__menu-list">
+								<li class="footer__menu-item">
+										<a class="footer__menu-item-link" href="#" target="_self" title="Home">home</a>
+								</li>
+								<li class="footer__menu-item">
+										<a class="footer__menu-item-link" href="#" target="_self" title="Recipes">recipes</a>
+								</li>
+								<li class="footer__menu-item">
+										<a class="footer__menu-item-link" href="#" target="_self" title="Photo galleries">photo galleries</a>
+								</li>
+								<li class="footer__menu-item">
+										<a class="footer__menu-item-link" href="#" target="_self" title="Videos">videos</a>
+								</li>
+								<li class="footer__menu-item">
+										<a class="footer__menu-item-link" href="#" target="_self" title="All categories">all categories</a>
+								</li>
+						</ul>
+				</div>
+				<div class="footer__copyright">
+						<p class="footer__copyright-years">&#169; 2016-2019 lemon.</p>
+						<p class="footer__copyright-all-right-reserved">all right reserved</p>
+				</div>
+				<div class="footer__social">
+						<a class="footer__social-link" href="#" target="_blank" title="Google+">google+</a>
+						<a class="footer__social-link" href="#" target="_blank" title="Twitter">twitter</a>
+						<a class="footer__social-link" href="#" target="_blank" title="Facebook">facebook</a>
+						<a class="footer__social-link" href="#" target="_blank" title="Pinterest">pinterest</a>
+				</div>
+		</footer>
 </body>
 </html>
