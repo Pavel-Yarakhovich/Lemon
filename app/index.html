@@ -11,19 +11,49 @@
 		<title>Lemon</title>
 </head>
 <body>
-		<header class="header container">
+		<header class="header container box-style">
 				<a class="header__logo" href="#" target="_self" title="На главную страницу">
-						<img src="img/lemon_logo_mobile.png" alt="Logo" width="" height="">
+						<img class="header__logo-img" src="img/lemon_logo_mobile.png" alt="Logo" width="" height="">
 				</a>
+				<nav class="header__main-menu">
+						<ul class="header__main-menu-list">
+								<li class="header__main-menu-item">
+										<a class="header__main-menu-item-link" href="#" target="_self" title="Home">home</a>
+								</li>
+								<li class="header__main-menu-item">
+										<a class="header__main-menu-item-link" href="#" target="_self" title="Recipes">recipes</a>
+								</li>
+								<li class="header__main-menu-item">
+										<a class="header__main-menu-item-link" href="#" target="_self" title="Photo galleries">photo galleries</a>
+								</li>
+								<li class="header__main-menu-item">
+										<a class="header__main-menu-item-link" href="#" target="_self" title="Videos">videos</a>
+								</li>
+								<li class="header__main-menu-item">
+										<a class="header__main-menu-item-link" href="#" target="_self" title="All categories">all categories</a>
+								</li>
+						</ul>
+				</nav>
 				<input class="header__search" type="search" placeholder="find a recipe">
 				<img class="header__burger-menu" src="img/burger_mobile.png" alt="Menu" width="20" height="15">
 		</header>
 		<main class="main container">
-				<section class="main__get-it-recipe">
-						<img class="main__get-it-recipe-img" src="img/get_it_recipe_bg_mobile.png" alt="Cooked dish image" width="320" height="202">
-						<p class="main__get-it-recipe-title">get it recipe</p>
+				<section class="main__get-it-recipe box-style">
+						<article class="main__get-it-recipe-item">
+								<img class="main__logo-img" src="img/Logo_get-it-recipe.png" alt="Logo" width="250" height="105">
+								<h1 class="main__get-it-recipe-item-title">Bananas Foster Ice Cream Cake</h1>
+								<p class="main__get-it-recipe-item-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, ratione quod ex nulla soluta laudantium neque fuga qui quasi! Voluptas explicabo provident temporibus deleniti sit itaque dolore necessitatibus nostrum reiciendis?</p>
+						</article>
+						<button class="main__get-it-recipe-button" title="Get it recipe">get it recipe</button>
+						<div class="main__get-it-recipe-toggles">
+								<span class="main__get-it-recipe-toggle"></span>
+								<span class="main__get-it-recipe-toggle"></span>
+								<span class="main__get-it-recipe-toggle"></span>
+								<span class="main__get-it-recipe-toggle"></span>
+								<span class="main__get-it-recipe-toggle"></span>
+						</div>
 				</section>
-				<section class="main__recipe-gallery">
+				<section class="main__recipe-gallery box-style">
 						<article class="main__recipe-gallery-item">
 								<img class="main__recipe-gallery-img" src="img/recipe_gallery_item_1.png" alt="Raspbery & Cream Frozen Yogurt Pie" width="320" height="208">
 								<div class="main__recipe-gallery-text-part">
@@ -57,6 +87,42 @@
 										</div>
 								</div>
 						</article>
+				</section>
+				<section class="main__recipe-details box-style">
+						<div class="main__recipe-details-img"></div>
+						<article class="main__recipe-details-item">
+								<h1 class="main__recipe-details-item-title">Bananas Foster Ice Cream Cake</h1>
+								<div class="main__recipe-details-item-info">
+										<div class="main__recipe-details-item-information information">
+												<p class="information__cooking-time">15mins |</p>
+												<p class="information__difficulty">Easy</p>
+										</div>
+										<button class="main__recipe-details-item-button button" title="Get it recipe" download>save recipe</button>
+								</div>
+								<p class="main__recipe-details-item-ingredients">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum laudantium nisi quidem aspernatur voluptatibus aperiam nobis.</p>
+								<h3 class="main__recipe-details-item-directions-title">Directions</h3>
+								<p class="main__recipe-details-item-directions">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi consectetur atque nobis laborum dolore sapiente, minima id at expedita veritatis nisi incidunt, quae mollitia in laboriosam? Perspiciatis nesciunt fuga corporis.</p>
+						</article>
+				</section>
+				<section class="main__editor">
+					<article class="main__editor-search box-style">
+						<h1 class="main__editor-search-title editor-title">404</h1>
+								<div class="main__editor-search-text-content">
+								<span class="main__editor-search-apologize">Sorry</span>
+								<p class="main__editor-search-execuse"> we couldn't<br>find the page</p>
+					</div>
+						<button class="main__editor-search-btn button">back</button>
+					</article>
+					<article class="main__editor-post box-style">
+						<h1 class="main__editor-post-title editor-title">Author</h1>
+						<div class="main__editor-post-text-content">
+							<img class="main__editor-post-authors-photo" src="img/author-photo.png" alt="Author" width="130" height="130">
+							<span class="main__editor-post-authors-name">Karen Gray</span>
+							<span class="main__editor-post-authors-country">United States</span>
+							<h2 class="main__editor-post-text-title">About Lemon</h2>
+							<p class="main__editor-post-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit quam esse quod, ab odit ea optio laborum cumque quis hic ullam, eaque officia id voluptatum cupiditate. Ea doloribus ratione iusto?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit quam esse quod, ab odit ea optio laborum cumque quis hic ullam, eaque officia id voluptatum cupiditate. Ea doloribus ratione iusto?</p>
+						</div>
+					</article>
 				</section>
 				<section class="main__recipes-list">
 						<div class="main__recipes-list-toggle">
