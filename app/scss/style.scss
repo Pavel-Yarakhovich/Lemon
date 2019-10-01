@@ -541,11 +541,14 @@ body {
 	line-height: 28px;
 	vertical-align: middle;
 	padding: 0;
-	border: 2px solid #eaeaea;
+	padding-right: 10px;
+	// border: 2px solid #c5c5c5;
 	width: 162px;
 	height: 28px;
-	font-size: 12px;
-	color: #999;
+	font-size: 13px;
+	color: rgb(68, 67, 67);
+	box-sizing: border-box;
+	background: url('../img/zoomer.png') no-repeat 12px center, linear-gradient(45deg, #c5c5c5, #eaeaea 25%, transparent 75%);
 }
 
 .header__burger-menu {
@@ -630,7 +633,7 @@ body {
 	margin: 0 0 25px 0;
 }
 
-.main__get-it-recipe-toggles {
+.toggles {
 	position: absolute;
 	bottom: 25px;
 	right: 20px;
@@ -638,7 +641,7 @@ body {
 	justify-content: flex-end;
 }
 
-.main__get-it-recipe-toggle {
+.toggle {
 	display: block;
 	width: 10px;
 	height: 10px;
@@ -649,7 +652,7 @@ body {
 	box-shadow: inset 1px 1px 4px #999;
 }
 
-.main__get-it-recipe-toggle:hover {
+.toggle:hover {
 	background: #555;
 	box-shadow: inset -1px -1px 4px #ddd;
 }
@@ -836,4 +839,189 @@ body {
 	border-radius: 50%;
 	box-shadow: 2px 2px 8px 0 #dadada;
 }
+
+.main__multipager {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 100px;
+}
+
+.main__miltipager-container {
+	width: 290px;
+	display: flex;
+	flex-direction: column;
+}
+
+.main__small-recipe {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	margin-bottom: 45px;
+}
+
+.main__small-recipe-inner {
+	padding: 25px 15px 0;
+	margin-bottom: 10px;
+}
+
+.main__small-recipe-title {
+	display: block;
+	margin: 0 0 15px;
+	padding-bottom: 10px;
+ 	border-bottom: 2px solid #eaeaea;
+ 	font-family: 'Playfair Display', serif;
+	font-size: 22px;
+	font-weight: 900;
+	text-align: center;
+	color: #055555;
+}
+
+.main__small-recipe-author-photo {
+	position: absolute;
+	top: -5px;
+	left: 10px;
+}
+
+.main__small-recipe-illustration {
+	height: 200px;
+	background: url('../img/get-it-recipe-bg.png') no-repeat 80% 40%;
+}
+
+.main__small-recipe-toggles {
+	right: 50%;
+	transform: translateX(50%);
+	bottom: 10px;
+}
+
+.main__small-recipe-description {
+	padding-left: 85px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.main__small-recipe-recipe-by {
+	font-size: 16px;
+	font-weight: 300;
+	margin-bottom: 4px;
+}
+
+.main__small-recipe-author {
+	font-size: 16px;
+	font-weight: 700;
+	margin-bottom: 4px;
+}
+
+.main__small-recipe-information {
+	padding: 0;
+}
+
+.main__target {
+	min-height: 470px;
+}
+
+.main__recipes-list {
+	margin-bottom: 45px;
+}
+
+.main__tags {
+	min-height: 160px;
+	margin-bottom: 45px;
+}
+
+.main__calendar {
+	min-height: 365px;
+}
+
+.main__popular-now {
+	min-height: 350px;
+	padding: 15px 20px;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	background: url('../img/popular_now_bg.png') no-repeat center bottom, #f8f8f8;
+	margin-bottom: 45px;
+}
+
+.main__popular-now-title {
+	font-family: 'Playfair Display', serif;
+	font-weight: 700;
+	font-size: 32px;
+	color: #7c1729;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #fbfcfd;
+}
+
+.main__popular-now-item-title {
+	margin: 10px 0;
+	font-size: 20px;
+}
+
+.main__popular-now-item-description {
+	font-size: 16px;
+} 
+
+.main__popular-now-item-btn {
+	font-size: 14px;
+}
+
+.main__popular-now-item-user-block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.main__timeline {
+	min-height: 430px;
+}
+
+
+
+.footer {
+	flex-direction: row;
+	padding: 0 50px 0 85px;
+	position: relative;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 180px;
+}
+
+.footer__user-block {
+	flex-basis: 65%;
+	flex-direction: row;
+}
+
+.footer__menu-list {
+	display: flex;
+	text-align: right;
+}
+
+.footer__menu-item-link {
+	padding: 0;
+	margin-right: 15px;
+}
+
+.footer__menu-item:last-child .footer__menu-item-link {
+	margin-right: 0;
+}
+
+.footer__copyright {
+	flex-basis: 35%;
+	border-top: none;
+	padding: 0;
+}
+	
+.footer__copyright-all-right-reserved,
+.footer__copyright-years {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+.footer__social-desktop {
+	position: absolute;
+	top: 100px;
+	left: 89%;
+}
+
 }
