@@ -69,7 +69,7 @@ a {
 	right: 0;
 	width: 50%;
 	height: 100%;
-	background-image:linear-gradient(to left, #7d7e7e, #7c1729);
+	background-image: linear-gradient(to left, #7d7e7e, #7c1729);
 	opacity: 1;
 }
 
@@ -78,7 +78,6 @@ a {
 	border-color: transparent;
 	transform: skew(-5deg);
 }
-
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -479,9 +478,6 @@ body {
 		}
 
 		.main__recipes-list-item {
-			padding-left: 70px;
-			margin-bottom: 20px;
-			position: relative;
 			flex-grow: 0;
 			flex-shrink: 1;
 			flex-basis: 40%;
@@ -971,11 +967,245 @@ body {
 	align-items: center;
 }
 
+.multipager-item {
+	padding: 25px 15px;
+	box-sizing: border-box;
+}
+
+.main__recipes-list {
+	padding-bottom: 50px;
+}
+
+.main__recipes-list-item {
+	flex-grow: 1;
+}
+
+.main__recipes-list-user-actions {
+	top: 25px;
+	left: 185px;
+}
+
+.main__recipes-list-toggle {
+	margin-bottom: 30px;
+}
+
+.main__recipes-list-toggle label {
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.main__recipes-list-toggle label:hover,
+.main__recipes-list-toggle label:active {
+	font-weight: 700;
+}
+
+.main__recipes-list-item-description {
+	font-size: 14px;
+	font-weight: 700;
+}
+
 .main__timeline {
 	min-height: 430px;
 }
 
+.main__authentification {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	margin-bottom: 120px;
+}
 
+.main__login,
+.main__sign-in {
+	width: 330px;
+	display: flex;
+	flex-flow: column;
+	padding: 20px 25px;
+	box-sizing: border-box;
+	align-items: center;
+}
+
+.main__login {
+	margin-right: 85px;
+}
+
+.input-style {
+	width: 100%;
+	height: 38px;
+	border: 1px solid #a0a0a0;
+	padding: 14px 20px;
+	margin-bottom: 15px;
+	box-sizing: border-box;
+	background: transparent;
+}
+
+.input-style::placeholder {
+	font-style: italic;
+	font-size: 14px;
+	opacity: 0.5;
+	transition: all 0.3 ease;
+}
+
+.input-style:focus,
+.input-style:hover {
+	box-shadow: inset 2px 2px 5px #a0a0a0;
+	outline: none;
+}
+
+.input-style:focus::placeholder,
+.input-style:hover::placeholder {
+	opacity: 0.8;
+} 
+
+.box-style-title {
+	align-self: stretch;
+	text-align: left;
+	font-size: 22px;
+	font-weight: 500;
+	padding-bottom: 10px;
+	margin: 0 0 25px;
+	border-bottom: 2px solid #a0a0a0;
+}
+
+.main__login-form-title,
+.main__sign-in-form-title {
+	margin: 0 0 20px;
+	font-weight: 300;
+}
+
+.main__login-form,
+.main__sign-in-form {
+	display: flex;
+	flex-flow: column;
+	align-items: flex-start;
+	width: 100%;
+}
+
+.main__sign-in-form-rep-password {
+	margin-bottom: 30px;
+}
+
+.main__sign-in-form-submit,
+.main__login-form-submit {
+	margin-bottom: 20px;
+	align-self: center;
+}
+
+.main__login-help-block {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+	align-self: stretch;
+}
+
+.main__login-form-remember-me-label,
+.main__login-form-rforgot-psw-link {
+	font-size: 12px;
+	font-weight: 500;
+	font-style: italic;
+	color: #a0a0a0;
+}
+
+.main__login-form-remember-me-label {
+	padding-left: 15px;
+	position: relative;
+}
+
+.main__login-form-remember-me-label::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	top: -2px;
+	left: 0;
+	border: 1px solid #a0a0a0;
+	border-radius: 2px;
+	transition: all 0.2s ease-in-out;
+}
+
+.main__login-form-remember-me-label:hover::before,
+.main__login-form-remember-me-label:active::before {
+	box-shadow: inset 2px 2px 3px #a0a0a0;
+}
+
+.main__login-form-remember-me:checked ~ .main__login-form-remember-me-label::before {
+	transform: rotate(-60deg);
+	border: 3px solid #dadada;
+	box-shadow: none;
+	border-color: #055555;
+	border-right-color: transparent;
+	border-top-color: transparent;
+	height: 4px;
+	width: 8px;
+	top: -4px;
+	left: 1px;
+} 
+
+.main__authentification-social {
+	margin-bottom: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.main__authentification-social-link {
+	font-size: 0px;
+	height: 18px;
+	width: 25px;
+	margin-right: 15px;
+	background: url('../img/socials_icons.png') no-repeat 0 50%;
+	background-size: cover;
+}
+
+.main__authentification-social-facebook {
+	height: 20px;
+	background: url('../img/socials_icons.png') no-repeat -73px 50%;
+	background-size: cover;
+}
+
+.main__authentification-social-link:last-child {
+	margin: 0;
+}
+
+.main__sign-in-agreement,
+.main__sign-in-terms-of-service-link {
+	align-self: flex-start;
+	margin: 0 0 3px;
+	font-size: 14px;
+	font-style: italic;
+	font-weight: 300;
+}
+
+.main__sign-in-terms-of-service-link {
+	color: #424386;
+	border-bottom: 1px solid #424386;
+	line-height: 1;
+}
+
+.main__login-to-sign-link {
+	color: #a0a0a0;
+}
+
+.main__post-a-comment {
+	min-height: 185px;
+	max-width: 840px;
+	margin: 0 auto 45px;
+
+}
+
+.main__comments {
+	min-height: 760px;
+	max-width: 840px;
+	margin: 0 auto 45px;
+}
+
+.main__pagination {
+	min-height: 95px;
+	max-width: 840px;
+	margin: 0 auto 150px;
+}
 
 .footer {
 	flex-direction: row;

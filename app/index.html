@@ -37,7 +37,9 @@
 		<input class="header__search" type="search" placeholder="find a recipe">
 		<img class="header__burger-menu" src="img/burger_mobile.png" alt="Menu" width="20" height="15">
 	</header>
+
 	<main class="main container">
+
 		<section class="main__get-it-recipe box-style">
 			<article class="main__get-it-recipe-item">
 				<img class="main__logo-img" src="img/Logo_get-it-recipe.png" alt="Logo" width="250" height="105">
@@ -53,6 +55,7 @@
 				<span class="toggle"></span>
 			</div>
 		</section>
+
 		<section class="main__recipe-gallery box-style">
 			<article class="main__recipe-gallery-item">
 				<img class="main__recipe-gallery-img" src="img/recipe_gallery_item_1.png" alt="Raspbery & Cream Frozen Yogurt Pie" width="320" height="208">
@@ -88,6 +91,7 @@
 				</div>
 			</article>
 		</section>
+
 		<section class="main__recipe-details box-style">
 			<div class="main__recipe-details-img"></div>
 			<article class="main__recipe-details-item">
@@ -104,6 +108,7 @@
 				<p class="main__recipe-details-item-directions">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi consectetur atque nobis laborum dolore sapiente, minima id at expedita veritatis nisi incidunt, quae mollitia in laboriosam? Perspiciatis nesciunt fuga corporis.</p>
 			</article>
 		</section>
+
 		<section class="main__editor">
 			<article class="main__editor-search box-style">
 				<h1 class="main__editor-search-title editor-title">404</h1>
@@ -124,6 +129,7 @@
 				</div>
 			</article>
 		</section>
+
 		<section class="main__multipager">
 			<div class="main__miltipager-container">
 				<article class="main__small-recipe box-style">
@@ -149,12 +155,14 @@
 						<span class="toggle"></span>
 					</div>
 				</article>
-				<article class="main__target box-style">
+
+				<article class="main__target box-style multipager-item">
+					<p class="main__target-title box-style-title">Target</p>
 				</article>
 			</div>
 			<div class="main__miltipager-container">
-				<article class="main__recipes-list box-style">
-					<p class="main__recipes-list-title">Recipe</p>
+				<article class="main__recipes-list box-style multipager-item">
+					<p class="main__recipes-list-title box-style-title">Recipe</p>
 					<div class="main__recipes-list-toggle">
 						<input type="checkbox" name="difficulty" value="easy" id="easy">
 						<input type="checkbox" name="difficulty" value="middle" id="middle">
@@ -185,8 +193,12 @@
 					</div>
 					<button class="main__recipes-list-view-more-btn button">view more</button>
 				</article>
-				<article class="main__tags box-style"></article>
-				<article class="main__calendar box-style"></article>
+				<article class="main__tags box-style multipager-item">
+					<p class="main__tags-title box-style-title">Tags</p>
+				</article>
+				<article class="main__calendar box-style multipager-item">
+					<p class="main__calendar-title box-style-title">Calendar</p>
+				</article>
 			</div>
 			<div class="main__miltipager-container">
 				<article class="main__popular-now">
@@ -204,11 +216,60 @@
 						</div>
 					</div>
 				</article>
-				<article class="main__timeline box-style"></article>
+				<article class="main__timeline box-style multipager-item">
+					<p class="main__timeline-title box-style-title">Timeline</p>
+				</article>
 			</div>
 
 		</section>
+
+		<section class="main__authentification">
+			<article class="main__login box-style">
+				<p class="main__login-title box-style-title">Login</p>
+				<form class="main__login-form" method="GET" action="#">
+					<p class="main__login-form-title">Login for LEMON</p>
+					<input class="main__login-form-email input-style"type="email" id="login-email" name="login-email" placeholder="email or login" required>
+					<input class="main__login-form-password input-style" type="password" id="login-psw" name="login-psw" placeholder="password" required>
+					<div class="main__login-help-block">
+						<input class="main__login-form-remember-me" type="checkbox" id="remember-me" name="remember-me">
+						<label class="main__login-form-remember-me-label" for="remember-me">Remember me</label>
+						<a class="main__login-form-rforgot-psw-link" href="#" title="Forgot you password?" target="_self">Forgot you password?</a>
+					</div>
+					<input class="main__login-form-submit button" type="submit" name="login-submit" value="LOGIN">
+				</form>
+				<div class="main__authentification-social">
+					<a class="main__authentification-social-link main__authentification-social-facebook" href="#" target="_blank" title="Facebook">facebook</a>
+					<a class="main__authentification-social-link main__authentification-social-google" href="#" target="_blank" title="Google+">google+</a>
+				</div>
+					<a class="main__login-to-sign-link" href="#" title="Don't have an account? Sign in" target="_self">Don't have an account? Sign in</a>
+			</article>
+			<article class="main__sign-in box-style">
+					<p class="main__sign-in-title box-style-title">Sign in</p>
+					<form class="main__sign-in-form" method="GET" action="#">
+						<p class="main__sign-in-form-title">Sign in for LEMON</p>
+						<input class="main__sign-in-form-email input-style" type="email" id="sign-in-email" name="sign-in-email" placeholder="email" required>
+						<input class="main__sign-in-form-username input-style" type="text" id="sign-in-username" name="sign-in-username" placeholder="user name" required>
+						<input class="main__sign-in-form-password input-style" type="password" id="sign-in-psw" name="sign-in-psw" placeholder="password" required>
+						<input class="main__sign-in-form-rep-password input-style" type="password" id="sign-in-rep-psw" name="sign-in-rep-psw" placeholder="repeat password" required>
+						<input class="main__sign-in-form-submit button" type="submit" name="sign-in-submit" value="SIGN UP">
+					</form>
+					<div class="main__authentification-social">
+						<a class="main__authentification-social-link main__authentification-social-facebook" href="#" target="_blank" title="Facebook">facebook</a>
+						<a class="main__authentification-social-link main__authentification-social-google" href="#" target="_blank" title="Google+">google+</a>
+					</div>
+					<p class="main__sign-in-agreement">By joining LEMON, you agree to our</p>
+					<a class="main__sign-in-terms-of-service-link" href="#" title="Terms of service" target="_self">Terms of service</a>
+			</article>
+		</section>
+
+		<section class="main__post-a-comment box-style"></section>
+
+		<section class="main__comments box-style"></section>
+
+		<section class="main__pagination box-style"></section>
+
 	</main>
+
 	<footer class="footer container">
 		<div class="footer__user-block">
 			<a class="footer__logo" href="#" target="_self" title="На главную страницу">
