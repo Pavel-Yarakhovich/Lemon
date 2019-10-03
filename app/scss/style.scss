@@ -10,73 +10,14 @@ a {
 	display: block;
 	height: 30px;
 	border: 2px solid #7d7e7e;
-	background: transparent;
 	font-weight: 300;
 	text-transform: uppercase;
 	line-height: 30px;
 	vertical-align: middle;
 	padding: 0 5px;
+	box-sizing: border-box;
 	position: relative;
-	transition: all .4s ease .1s;
-	overflow: hidden;
-}
-
-.button::before {
-	content:"";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 0%;
-	height: 100%;
-	background: #7d7e7e;
-	opacity: 1;
-	transition: all .7s ease .1s;
-	z-index: -1;
-}
-
-.button::after {
-	content:"";
-	display: block;
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 0%;
-	height: 100%;
-	background: #7d7e7e;
-	opacity: 0;
-	transition: all .4s ease .1s;
-	z-index: -1;
-}
-
-.button:hover::before {
-	content:"";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 50%;
-	height: 100%;
-	background-image:linear-gradient(to right, #7d7e7e, #7c1729);
-	opacity: 1;
-}
-
-.button:hover::after {
-	content:"";
-	display: block;
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 50%;
-	height: 100%;
-	background-image: linear-gradient(to left, #7d7e7e, #7c1729);
-	opacity: 1;
-}
-
-.button:hover {
-	color: #fff;
-	border-color: transparent;
-	transform: skew(-5deg);
+	background: transparent;
 }
 
 input[type="checkbox"],
@@ -189,6 +130,7 @@ body {
 	margin: 0;
 	letter-spacing: -0.5px;
 	position: relative;
+	white-space: nowrap;
 }
 
 .information__cooking-time::before,
@@ -211,6 +153,85 @@ body {
 .information__views::before {
 	background: url(../img/view_icon.png) no-repeat 0% 50%;
 }
+
+.main__recipe-details,
+.main__editor-search,
+.main__miltipager-container-left,
+.main__tags,
+.main__calendar,
+.main__timeline,
+.main__authentification,
+.main__post-a-comment,
+.main__comments,
+.main__pagination {
+	display: none;
+}
+
+.main__editor-search,
+.main__editor-post {
+	padding: 10px 10px;
+}
+
+.editor-title {
+	margin: 0;
+	padding: 0 10px 5px;
+	font-size: 20px;
+	font-weight: 400;
+	font-style: italic;
+	border-bottom: 2px solid #eaeaea;
+}
+
+.main__editor-post {
+	background: url('../img/Signature.png') no-repeat 90% 93%, #f8f8f8;
+	padding-bottom: 115px;
+}
+
+.main__editor-post-text-content {
+	padding: 35px 0 0 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	position: relative;
+}
+
+.main__editor-post-authors-name {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.main__editor-post-authors-country {
+	font-size: 16px;
+	font-weight: 300;
+	padding-bottom: 45px;
+	border-bottom: 2px solid #eaeaea;
+}
+
+.main__editor-post-content {
+	font-size: 14px;
+	font-weight: 300;
+	font-style: italic;
+	margin: 0;
+	padding: 0;
+}
+
+.main__editor-post-text-title {
+	font-size: 20px;
+	font-weight: 400;
+	font-style: italic;
+	padding: 0;
+	margin: 20px 0 30px 0;
+}
+
+.main__editor-post-authors-photo {
+	position: absolute;
+	top: 20px;
+	left: 55%;
+	text-align: right;
+	border-radius: 50%;
+	box-shadow: 2px 2px 8px 0 #dadada;
+}
+
+
 
 .main__recipes-list {
 	display: flex;
@@ -836,6 +857,18 @@ body {
 	box-shadow: 2px 2px 8px 0 #dadada;
 }
 
+.main__editor-search,
+.main__miltipager-container-left,
+.main__tags,
+.main__calendar,
+.main__timeline,
+.main__authentification,
+.main__post-a-comment,
+.main__comments,
+.main__pagination {
+	display: block;
+}
+
 .main__multipager {
 	display: flex;
 	justify-content: space-around;
@@ -921,8 +954,20 @@ body {
 }
 
 .main__tags {
-	min-height: 160px;
 	margin-bottom: 45px;
+}
+
+.main__tags-kit {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.tag {
+	font-weight: 300;
+	font-size: 14px;
+	margin: 3px 5px;
+	text-transform: uppercase;
 }
 
 .main__calendar {
@@ -1192,7 +1237,62 @@ body {
 	min-height: 185px;
 	max-width: 840px;
 	margin: 0 auto 45px;
+	padding: 20px 40px 30px;
+	box-sizing: border-box;
+}
 
+.main__post-a-comment-header,
+.main__post-a-comment-soc-toggles,
+.main__post-a-comment-post,
+.main__post-a-comment-form {
+	display: flex;
+	justify-content: space-between;
+}
+
+.main__post-a-comment-form {
+	flex-grow: 1;
+	align-items: center;
+}
+
+.main__post-a-comment-header {
+	margin-bottom: 20px;
+	align-items: flex-end;
+}
+
+.main__post-a-comment-title {
+	font-size: 24px;
+	font-weight: 500;
+	margin: 0;
+}
+
+.main__post-a-comment-soc-toggles label {
+	margin: 0 10px;
+	font-size: 16px;
+	font-weight: 500;
+} 
+
+.main__post-a-comment-post {
+	padding: 15px 20px;
+	box-sizing: border-box;
+	background-color: #eaeaea;
+	align-items: center;
+}
+
+.main__post-a-comment-photo {
+	margin-right: 65px;
+	border-radius: 50%;
+}
+
+.main__post-a-comment-text {
+	margin: 0;
+	background: #f8f8f8;
+}
+
+.main__post-a-comment-submit {
+	margin-left: 5px;
+	color: #fff;
+	background: #353131;
+	border-color: #353131;
 }
 
 .main__comments {
@@ -1202,10 +1302,36 @@ body {
 }
 
 .main__pagination {
-	min-height: 95px;
 	max-width: 840px;
 	margin: 0 auto 150px;
+	padding: 15px;
+	box-sizing: border-box;
 }
+
+.main__pagination-list {
+	list-style: none;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main__pagination-item {
+	padding: 0;
+	margin: 0 15px;
+}
+
+.main__pagination-link {
+	font-weight: 300;
+	color: #323232;
+}
+
+.main__pagination-link:hover,
+.main__pagination-link:active {
+	color: #055555;
+	font-weight: 500;
+}
+
 
 .footer {
 	flex-direction: row;

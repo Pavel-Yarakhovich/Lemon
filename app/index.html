@@ -131,7 +131,7 @@
 		</section>
 
 		<section class="main__multipager">
-			<div class="main__miltipager-container">
+			<div class="main__miltipager-container main__miltipager-container-left">
 				<article class="main__small-recipe box-style">
 					<div class="main__small-recipe-inner">
 						<p class="main__small-recipe-title">Chi-Chi or Chichi</p>
@@ -160,7 +160,7 @@
 					<p class="main__target-title box-style-title">Target</p>
 				</article>
 			</div>
-			<div class="main__miltipager-container">
+			<div class="main__miltipager-container main__miltipager-container-middle">
 				<article class="main__recipes-list box-style multipager-item">
 					<p class="main__recipes-list-title box-style-title">Recipe</p>
 					<div class="main__recipes-list-toggle">
@@ -195,12 +195,36 @@
 				</article>
 				<article class="main__tags box-style multipager-item">
 					<p class="main__tags-title box-style-title">Tags</p>
+					<div class="main__tags-kit">
+						<span class="tag" id="fun">#fun</span>
+						<span class="tag" id="spoon">#spoon</span>
+						<span class="tag" id="dessert">#dessert</span>
+						<span class="tag" id="master_chef">#master_chef</span>
+						<span class="tag" id="diet">#diet</span>
+						<span class="tag" id="avocado">#avocado</span>
+						<span class="tag" id="apple_pie">#apple_pie</span>
+						<span class="tag" id="pineapple">#pineapple</span>
+						<span class="tag" id="sushi">#sushi</span>
+						<span class="tag" id="modern_kebab">#modern_kebab</span>
+						<span class="tag" id="vinegar">#vinegar</span>
+						<span class="tag" id="fun">#fun</span>
+						<span class="tag" id="spoon">#spoon</span>
+						<span class="tag" id="dessert">#dessert</span>
+						<span class="tag" id="master_chef">#master_chef</span>
+						<span class="tag" id="diet">#diet</span>
+						<span class="tag" id="avocado">#avocado</span>
+						<span class="tag" id="apple_pie">#apple_pie</span>
+						<span class="tag" id="pineapple">#pineapple</span>
+						<span class="tag" id="sushi">#sushi</span>
+						<span class="tag" id="modern_kebab">#modern_kebab</span>
+						<span class="tag" id="vinegar">#vinegar</span>
+					</div>
 				</article>
 				<article class="main__calendar box-style multipager-item">
 					<p class="main__calendar-title box-style-title">Calendar</p>
 				</article>
 			</div>
-			<div class="main__miltipager-container">
+			<div class="main__miltipager-container main__miltipager-container-right">
 				<article class="main__popular-now">
 					<span class="main__popular-now-title">Popular Now</span>
 					<div class="main__popular-now-item">
@@ -262,11 +286,56 @@
 			</article>
 		</section>
 
-		<section class="main__post-a-comment box-style"></section>
+		<section class="main__post-a-comment box-style">
+			<div class="main__post-a-comment-header">
+				<p class="main__post-a-comment-title">Post a comment</p>
+				<div class="main__post-a-comment-soc-toggles">
+					<input type="checkbox" id="fb-toggle" name="fb-toggle">
+					<input type="checkbox" id="twitter-toggle" name="twitter-toggle">
+					<label class="main__post-a-comment-soc-toggles label" for="fb-toggle">Facebook</label>
+					<span>|</span>
+					<label class="main__post-a-comment-soc-toggles label" for="twitter-toggle">Twitter</label>
+				</div>
+			</div>
+			<article class="main__post-a-comment-post">
+				<img class="main__post-a-comment-photo" src="img/author-photo.png" width="55" height="55" title="Commentor">
+				<form class="main__post-a-comment-form">
+					<input type="text" class="main__post-a-comment-text input-style" id="post-a-comment-text" name="post-a-comment-text">
+					<input class="main__post-a-comment-submit button" type="submit" id="post-a-comment-submit" name="post-a-comment-submit" value="post">
+				</form>
+			</article>
+		</section>
 
 		<section class="main__comments box-style"></section>
 
-		<section class="main__pagination box-style"></section>
+		<section class="main__pagination box-style">
+			<ul class="main__pagination-list">
+				<li class="main__pagination-item">
+					<a class="main__pagination-link" href="#" title="Previous page" target="_self">&lt;</a>
+				</li>
+				<li class="main__pagination-item">
+					<a class="main__pagination-link" href="#" title="1" target="_self">1</a>
+				</li>
+				<li class="main__pagination-item">
+					<a class="main__pagination-link" href="#" title="2" target="_self">2</a>
+				</li>
+				<li class="main__pagination-item">
+					<a class="main__pagination-link" href="#" title="3" target="_self">3</a>
+				</li>
+				<li class="main__pagination-item">
+					<a class="main__pagination-link" href="#" title="4" target="_self">4</a>
+				</li>
+				<li class="main__pagination-item">
+					<a class="main__pagination-link" href="#" title="5" target="_self">5</a>
+				</li>
+				<li class="main__pagination-item">
+					<a class="main__pagination-link" href="#" title="6" target="_self">6</a>
+				</li>
+				<li class="main__pagination-item">
+					<a class="main__pagination-link" href="#" title="Next page" target="_self">&gt;</a>
+				</li>
+			</ul>
+		</section>
 
 	</main>
 
