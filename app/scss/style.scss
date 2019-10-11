@@ -39,10 +39,7 @@ $lightgrey: rgb(220, 220, 220);
 	white-space: nowrap;
 	cursor: pointer;
 }
-.main__sign-in-form-submit::before,
-.main__sign-in-form-submit::after,
-.main__login-form-submit::before, 
-.main__login-form-submit::after, 
+
 .button::before,
 .button::after {
 	content:"";
@@ -55,20 +52,32 @@ $lightgrey: rgb(220, 220, 220);
 	border: 1px solid $lightgrey;
 }
 
-.main__sign-in-form-submit::before,
-.main__sign-in-form-submit::after,
-.main__login-form-submit::before, 
-.main__login-form-submit::after, 
+.button:active {
+	border-radius: 5px;
+	border-color: $green;
+}
+
 .button:hover::before,
 .button:hover::after {
 	transform: rotate(7deg);
 	transform-origin: center center -1;
 	transition: all 0.3s ease-in;
 }
-.button:hover::after,
-.main__sign-in-form-submit::after, 
-.main__login-form-submit::after {
+
+.button:hover::after {
 	transform: rotate(-7deg);
+}
+
+.button:active::before,
+.button:active::after {
+	transform: rotate(-7deg);
+	transform-origin: center;
+	border-radius: 10px;
+}
+
+.button:active::after {
+	transform: rotate(7deg);
+	transform-origin: 100% 100% -1;
 }
 
 input[type="checkbox"],
@@ -534,7 +543,7 @@ body {
 		font-size: 0px;
 		position: relative;
 		display: inline-block;
-		margin-right: 15px;
+		margin-right: 5px;
 		width: 15px;
 		height: 15px;
 		transition: all 0.2s ease;
@@ -697,7 +706,6 @@ body {
 	line-height: 30px;
 	vertical-align: middle;
 	box-sizing: border-box;
-	background: $white-bg;
 	color: $grey;
 	font-weight: 300;
 	outline: none;
@@ -706,7 +714,6 @@ body {
 	white-space: nowrap;
 	cursor: pointer;
 	padding: 0;
-	padding-right: 10px;
 	margin: 0;
 	width: 162px;
 	font-size: 13px;
@@ -922,6 +929,7 @@ body {
 	margin-bottom: 140px;
 	padding: 0;
 	max-height: 425px;
+	box-sizing: border-box;
 }
 
 .main__recipe-details-img {
@@ -930,6 +938,7 @@ body {
 	position: relative;
 	background: url('../img/recipe-details-bg.png') no-repeat left center;
 	background-size: cover;
+	height: auto;
 }
 
 .main__recipe-details-img:before {
@@ -1080,6 +1089,19 @@ body {
 		color: grey;
 		text-transform: uppercase;
 		margin: 0;
+		position: relative;
+	}
+
+	&-execuse::after {
+		content:'';
+		display: block;
+		position: absolute;
+		bottom: -35px;
+		left: 60%;
+		transform: translateX(-50%);
+		width: 33px;
+		height: 27px;
+		background: url('../img/sad-smile.png') no-repeat 50% 50%;
 	}
 
 	&-btn {
@@ -1515,12 +1537,13 @@ body {
 	width: 100%;
 	height: 38px;
 	border: 1px solid $lightgrey;
-	padding: 14px 20px;
+	padding: 0 20px;
 	margin-bottom: 15px;
 	box-sizing: border-box;
 	background: transparent;
+	position: relative;
 }
-
+//styles for placeholder does not applicable in Mozilla
 .input-style::placeholder {
 	font-style: italic;
 	font-size: 14px;
@@ -1601,7 +1624,7 @@ body {
 	height: 10px;
 	top: -2px;
 	left: 0;
-	border: 1px solid $grey;
+	border: 1px solid $lightgrey;
 	border-radius: 2px;
 	transition: all 0.2s ease-in-out;
 }
@@ -1685,6 +1708,7 @@ body {
 .main__post-a-comment-form {
 	flex-grow: 1;
 	align-items: center;
+	position: relative;
 }
 
 .main__post-a-comment-header {
@@ -1722,6 +1746,11 @@ body {
 	margin: 0;
 	background: $white-bg;
 	border-color: $grey;
+	position: relative;
+}
+
+.main__post-a-comment-text:focus {
+
 }
 
 .main__post-a-comment-submit {
@@ -1840,11 +1869,55 @@ body {
 	padding: 0;
 }
 
+.main__comments-show-more {
+	border: none;
+	background: none;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0;
+	color: $grey;
+	position: relative;
+	transition: all 0.3s ease-out;
+
+	&::after {
+		content:'';
+		display: block;
+		position: absolute;
+		width: 15px;
+		height: 15px;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%) rotate(45deg);
+		border-radius: 0 0 5px 0;
+		border: 2px solid $darkred;
+		border-left-color: transparent;
+		border-top-color: transparent;
+		opacity: 0;
+	}
+
+	&:hover {
+		cursor: pointer;
+		color: $darkred;
+		margin-bottom: 30px;
+	}
+
+	&:hover::after {
+		bottom: -20px;
+		opacity: 1;
+		transition: all 0.2s ease-out 0.1s;
+	}
+}
+
 .information__shared,
 .information__liked {
 	font-weight: 700;
 	padding: 0 20px 0 0;
 	margin-left: 10px;
+}
+
+.information__shared:hover,
+.information__liked:hover {
+	color: $link;
 }
 
 .information__shared::before,
@@ -1856,7 +1929,40 @@ body {
 	height: 12px;
 	top: -1px;
 	right: 0;
-	background: $grey;
+	background: url('../img/icon-shared.png') no-repeat 50% 50%;
+	transition: all 0.3s ease;
+}
+
+.information__liked:hover::before {
+	animation: shake-like 0.2s linear infinite;
+}
+
+.information__shared:hover::before {
+	animation: shake-share 0.2s linear infinite;
+}
+
+.information__liked:active::before,
+.information__shared:active::before {
+	animation: none;
+	transform: scale(1.2);
+}
+
+@keyframes shake-like {
+	0% {transform: rotate(-20deg); transform-origin: 50% 100%;}
+	50% {transform: rotate(20deg); transform-origin: 50% 100%;}
+	80% {transform: rotate(-10deg); transform-origin: 50% 100%;}
+	100% {transform: rotate(0deg); transform-origin: 50% 100%;}
+}
+
+@keyframes shake-share {
+	0% {transform: rotate(-20deg); transform-origin: 0% 50%;}
+	50% {transform: rotate(20deg); transform-origin: 0% 50%;}
+	80% {transform: rotate(-10deg); transform-origin: 0% 50%;}
+	100% {transform: rotate(0deg); transform-origin: 0% 50%;}
+}
+
+.information__liked::before {
+	background: url('../img/icon-liked.png') no-repeat -15px 50%;
 }
 
 .main__pagination {
@@ -1934,6 +2040,10 @@ body {
 	position: absolute;
 	top: 100px;
 	left: 1085px;
+}
+
+.social-link {
+	margin-right: 15px;
 }
 
 }
