@@ -110,6 +110,12 @@ body {
 	display: none;
 }
 
+.header__input-wrapper {
+	margin: 0;
+	padding: 0;
+	background: url(../img/search-icon.png) no-repeat 12px 8px;
+}
+
 .header__search {
 	text-align: right;
 	margin: 0;
@@ -118,6 +124,7 @@ body {
 	border: none;
 	width: auto;
 	background-color: transparent;
+	box-sizing: border-box;
 }
 
 .main__get-it-recipe {
@@ -589,6 +596,10 @@ body {
 		min-height: 15vh;
 	}
 
+	.header__input-wrapper {
+		background: url(../img/search-icon.png) no-repeat 30px 7px;
+	}
+
 	.header__search {
 		text-align: center;
 		font-size: 18px;
@@ -699,6 +710,10 @@ body {
 	height: auto;
 }
 
+.header__input-wrapper {
+	background: url(../img/search-icon.png) no-repeat 10px 7px;
+}
+
 .header__search {
 	display: block;
 	position: relative;
@@ -714,6 +729,7 @@ body {
 	white-space: nowrap;
 	cursor: pointer;
 	padding: 0;
+	padding-left: 40px;
 	margin: 0;
 	width: 162px;
 	font-size: 13px;
@@ -1747,10 +1763,6 @@ body {
 	background: $white-bg;
 	border-color: $grey;
 	position: relative;
-}
-
-.main__post-a-comment-text:focus {
-
 }
 
 .main__post-a-comment-submit {
