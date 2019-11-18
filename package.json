@@ -29,6 +29,7 @@
     "normalize.css": "^8.0.1"
   },
   "dependencies": {
+    "jquery": "^3.4.1",
     "magnific-popup": "^1.1.0",
     "slick-carousel": "^1.8.1"
   }
