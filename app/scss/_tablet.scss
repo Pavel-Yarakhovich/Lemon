@@ -1,0 +1,90 @@
+@media screen and (min-width: 768px) {
+	body {
+		font-size: 18px;
+	}
+	
+	.container {
+		width: 90%;
+	}
+
+	.header {
+		min-height: 15vh;
+	}
+
+	.header__input-wrapper {
+		background: url(../img/search-icon.png) no-repeat 30px 7px;
+	}
+
+	.header__search {
+		text-align: center;
+		font-size: 18px;
+		margin: 0;
+		text-transform: uppercase;
+		color: inherit;
+		border: none;
+		width: 100%;
+		margin: 0 20px;
+		background-color: transparent;
+	}
+
+	.main__get-it-recipe {
+		min-height: 85vh;
+		background: url('../img/get-it-recipe-bg.png') no-repeat center bottom;
+		background-size: cover;
+	}
+
+	.main__get-it-recipe-button {
+		background: $white-bg;
+	}
+
+	.main__recipe-gallery {
+		@include flexible(center);
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.main__recipe-gallery-item {
+		flex-grow: 1;
+		@include flexible(center);
+		flex-flow: column;
+		align-items: center;
+	}
+
+	.main__recipe-gallery-img {
+		flex-basis: 50%;
+	}
+
+	.main__recipes-list-easy-items {
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.main__recipes-list-item {
+		flex-grow: 0;
+		flex-shrink: 1;
+		flex-basis: 49%;
+	}
+
+	.main__editor-post-authors-photo {
+		top: -2px;
+		left: 75%;
+	}
+
+	.main__popular-now {
+		background: url('../img/popular_now_bg.png') no-repeat left bottom;
+		padding-left: 330px;
+	}
+
+	.main__popular-now-item {
+		margin-bottom: 0;
+	}
+
+	.main__popular-now-item-user-block {
+		justify-content: left;
+	}
+
+	.main__popular-now-title {
+		border-color: #000;
+	}	
+}

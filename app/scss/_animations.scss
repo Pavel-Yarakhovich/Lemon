@@ -1,0 +1,18 @@
+@keyframes waves {
+	0% {opacity: 1; transform: scale(1)}
+	100% {opacity: 0; transform: scale(1.8)}
+}
+
+@keyframes shake-like {
+	0% {transform: rotate(-20deg); transform-origin: 50% 100%;}
+	50% {transform: rotate(20deg); transform-origin: 50% 100%;}
+	80% {transform: rotate(-10deg); transform-origin: 50% 100%;}
+	100% {transform: rotate(0deg); transform-origin: 50% 100%;}
+}
+
+@keyframes shake-share {
+	0% {transform: rotate(-20deg); transform-origin: 0% 50%;}
+	50% {transform: rotate(20deg); transform-origin: 0% 50%;}
+	80% {transform: rotate(-10deg); transform-origin: 0% 50%;}
+	100% {transform: rotate(0deg); transform-origin: 0% 50%;}
+}
